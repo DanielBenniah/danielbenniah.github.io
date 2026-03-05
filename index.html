@@ -12,6 +12,9 @@
 </head>
 <body>
   <header class="site-header">
+    <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">
+      <span class="theme-toggle-icon" aria-hidden="true"></span>
+    </button>
     <nav class="nav">
       <a href="#about" class="nav-link">About</a>
       <a href="#recognition" class="nav-link">Recognition</a>
@@ -25,13 +28,17 @@
 
   <main>
     <section class="hero">
-      <img src="assets/headshot.png" alt="Daniel Benniah John" class="hero-headshot" width="200" height="200" />
-      <h1 class="hero-title">Daniel Benniah John</h1>
-      <p class="hero-subtitle">Distributed systems & applied AI</p>
-      <p class="hero-tagline">I advance large-scale AI infrastructure, reinforcement-learning decision systems, and cloud platform engineering — while also writing and speaking on why human governance remains essential for correctness and reliability in financial systems.</p>
-      <div class="hero-cta">
-        <a href="#contact" class="btn btn-primary">Get in touch</a>
-        <a href="https://linkedin.com/in/danielbenniah" class="btn btn-outline" target="_blank" rel="noopener">LinkedIn</a>
+      <div class="hero-inner">
+        <div class="hero-content">
+          <h1 class="hero-title">Daniel Benniah John</h1>
+          <p class="hero-subtitle">Distributed systems & applied AI</p>
+          <p class="hero-tagline">I advance large-scale AI infrastructure, reinforcement-learning decision systems, and cloud platform engineering — while also writing and speaking on why human governance remains essential for correctness and reliability in financial systems.</p>
+          <div class="hero-cta">
+            <a href="#contact" class="btn btn-primary">Get in touch</a>
+            <a href="https://linkedin.com/in/danielbenniah" class="btn btn-outline" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+        <img src="assets/headshot.png" alt="Daniel Benniah John" class="hero-headshot" width="260" height="260" />
       </div>
     </section>
 
@@ -212,6 +219,15 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+    (function() {
+      var toggle = document.getElementById('theme-toggle');
+      var stored = localStorage.getItem('theme');
+      if (stored === 'light') document.documentElement.classList.add('theme-light');
+      toggle.addEventListener('click', function() {
+        document.documentElement.classList.toggle('theme-light');
+        localStorage.setItem('theme', document.documentElement.classList.contains('theme-light') ? 'light' : 'dark');
+      });
+    })();
   </script>
 </body>
 </html>
