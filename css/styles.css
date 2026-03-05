@@ -219,7 +219,7 @@ a.btn:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   padding: var(--section-padding-y) var(--space-xl);
   background: linear-gradient(165deg, var(--bg) 0%, var(--bg-elevated) 50%, var(--bg) 100%);
 }
@@ -233,7 +233,8 @@ a.btn:hover {
 .hero-inner {
   width: 100%;
   max-width: var(--max-wide);
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -242,15 +243,20 @@ a.btn:hover {
 }
 @media (min-width: 768px) {
   .hero-inner {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "content headshot";
     align-items: center;
-    justify-content: space-between;
-    text-align: left;
     gap: var(--space-3xl);
+    text-align: left;
   }
   .hero-content {
-    flex: 1;
+    grid-area: content;
     min-width: 0;
+  }
+  .hero-headshot {
+    grid-area: headshot;
+    justify-self: end;
   }
 }
 
@@ -261,13 +267,11 @@ a.btn:hover {
   object-fit: cover;
   border: 3px solid var(--accent);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(14, 165, 233, 0.15);
-  flex-shrink: 0;
 }
 @media (min-width: 768px) {
   .hero-headshot {
     width: 260px;
     height: 260px;
-    order: 2;
   }
 }
 
