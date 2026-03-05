@@ -6,11 +6,11 @@
   --surface: #161b21;
   --text: #f0f4f8;
   --text-muted: #7d8a99;
-  --accent: #e8b84a;
-  --accent-dim: #c49a1f;
+  --accent: #0ea5e9;
+  --accent-dim: #38bdf8;
   --border: #2a323c;
   --font-sans: "DM Sans", system-ui, sans-serif;
-  --font-serif: "Instrument Serif", Georgia, serif;
+  --font-heading: "Outfit", system-ui, sans-serif;
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
   --space-md: 1rem;
@@ -47,11 +47,18 @@ body {
 a {
   color: var(--accent);
   text-decoration: none;
-  transition: color 0.2s ease;
+  display: inline-block;
+  transition: color 0.2s ease, text-decoration 0.2s ease, transform 0.2s ease;
 }
 
 a:hover {
   color: var(--accent-dim);
+  text-decoration: underline;
+  transform: scale(1.02);
+}
+
+a.btn:hover {
+  text-decoration: none;
 }
 
 /* --- Header --- */
@@ -64,7 +71,7 @@ a:hover {
   background: rgba(10, 12, 14, 0.85);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--accent);
 }
 
 .nav {
@@ -85,7 +92,7 @@ a:hover {
 }
 
 .nav-link:hover {
-  color: var(--text);
+  color: var(--accent);
 }
 
 /* --- Sections --- */
@@ -96,10 +103,10 @@ a:hover {
 }
 
 .section-title {
-  font-family: var(--font-serif);
-  font-size: clamp(2rem, 5vw, 2.75rem);
-  font-weight: 400;
-  color: var(--text);
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 600;
+  color: var(--accent);
   margin: 0 0 var(--space-2xl);
   letter-spacing: -0.02em;
   line-height: 1.2;
@@ -118,8 +125,8 @@ a:hover {
   margin-right: auto;
 }
 
-.recognition .recognition-grid {
-  max-width: var(--max-wide);
+.recognition .recognition-list {
+  max-width: var(--max-content);
   margin: 0 auto;
 }
 
@@ -176,19 +183,20 @@ a:hover {
 }
 
 .hero-title {
-  font-family: var(--font-serif);
-  font-size: clamp(3rem, 10vw, 5.5rem);
-  font-weight: 400;
+  font-family: var(--font-heading);
+  font-size: clamp(2.25rem, 7vw, 3.5rem);
+  font-weight: 700;
   margin: 0 0 var(--space-md);
   letter-spacing: -0.03em;
-  line-height: 1.05;
+  line-height: 1.1;
 }
 
 .hero-subtitle {
-  font-size: 1.15rem;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
   color: var(--accent);
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   margin: 0 0 var(--space-xl);
 }
@@ -259,26 +267,25 @@ a:hover {
 }
 
 /* --- Recognition --- */
-.recognition-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-xl);
+.recognition-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
 }
 
-.recognition-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-xl);
-  transition: border-color 0.2s, box-shadow 0.2s;
+.recognition-block {
+  width: 100%;
+  padding-bottom: var(--space-2xl);
+  border-bottom: 1px solid var(--border);
 }
 
-.recognition-card:hover {
-  border-color: rgba(232, 184, 74, 0.3);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+.recognition-block:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
 }
 
-.recognition-card h3 {
+.recognition-block h3 {
+  font-family: var(--font-heading);
   font-size: 1rem;
   font-weight: 600;
   margin: 0 0 var(--space-md);
@@ -286,38 +293,46 @@ a:hover {
   letter-spacing: 0.02em;
 }
 
-.recognition-card p {
-  margin: 0;
+.recognition-block p {
+  margin: 0 0 var(--space-sm);
   font-size: 0.95rem;
   color: var(--text-muted);
   line-height: 1.65;
 }
 
-.recognition-card--press {
-  grid-column: 1 / -1;
+.recognition-block ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
 }
 
-.press-links {
+.recognition-block ul.press-links {
   list-style: none;
-  margin: var(--space-md) 0 0;
-  padding: 0;
+  padding-left: 0;
+  margin-top: var(--space-sm);
 }
 
-.press-links li {
+.recognition-block ul:not(.press-links) li {
+  margin-bottom: var(--space-xs);
+}
+
+.recognition-block .press-links li {
   margin-bottom: var(--space-sm);
   font-size: 0.9rem;
 }
 
-.press-links li:last-child {
+.recognition-block .press-links li:last-child {
   margin-bottom: 0;
 }
 
-.press-links a {
+.recognition-block .press-links a {
   color: var(--text-muted);
   transition: color 0.2s;
 }
 
-.press-links a:hover {
+.recognition-block .press-links a:hover {
   color: var(--accent);
 }
 
@@ -342,7 +357,7 @@ a:hover {
 
 .highlight-item {
   padding: var(--space-xl) 0;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--accent);
 }
 
 .highlight-item:last-of-type {
@@ -350,6 +365,7 @@ a:hover {
 }
 
 .highlight-item h3 {
+  font-family: var(--font-heading);
   font-size: 0.85rem;
   font-weight: 600;
   margin: 0 0 var(--space-md);
@@ -397,7 +413,7 @@ a:hover {
 }
 
 .timeline-item:hover {
-  border-color: rgba(232, 184, 74, 0.25);
+  border-color: rgba(14, 165, 233, 0.25);
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
 }
 
@@ -422,7 +438,8 @@ a:hover {
 }
 
 .timeline-item h3 {
-  font-size: 1rem;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
   font-weight: 600;
   color: var(--text);
   margin: 0 0 var(--space-md);
@@ -459,7 +476,8 @@ a:hover {
 }
 
 .edu-card h3 {
-  font-size: 1.05rem;
+  font-family: var(--font-heading);
+  font-size: 1rem;
   margin: 0 0 var(--space-sm);
   color: var(--text);
 }
@@ -477,6 +495,31 @@ a:hover {
   opacity: 0.95;
   margin: var(--space-sm) 0 0;
   line-height: 1.5;
+}
+
+/* --- Expertise --- */
+.expertise .section-title {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.expertise-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-md);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.expertise-list li {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-md) var(--space-lg);
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  cursor: default;
 }
 
 /* --- Contact --- */
@@ -500,7 +543,7 @@ a:hover {
 .site-footer {
   text-align: center;
   padding: var(--space-2xl) var(--space-xl);
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--accent);
   color: var(--text-muted);
   font-size: 0.9rem;
 }

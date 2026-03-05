@@ -7,7 +7,7 @@
   <meta name="description" content="Daniel Benniah John — Industry leader in large-scale AI infrastructure, reinforcement-learning decision systems, and cloud platform engineering. IEEE Senior Member. Netflix, Square, Amazon." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -18,6 +18,7 @@
       <a href="#research" class="nav-link">Research</a>
       <a href="#work" class="nav-link">Work</a>
       <a href="#education" class="nav-link">Background</a>
+      <a href="#expertise" class="nav-link">Expertise</a>
       <a href="#contact" class="nav-link">Contact</a>
     </nav>
   </header>
@@ -27,7 +28,7 @@
       <img src="assets/headshot.png" alt="Daniel Benniah John" class="hero-headshot" width="200" height="200" />
       <h1 class="hero-title">Daniel Benniah John</h1>
       <p class="hero-subtitle">Distributed systems & applied AI</p>
-      <p class="hero-tagline">I advance large-scale AI infrastructure, reinforcement-learning decision systems, and cloud platform engineering — and help shape how the industry evaluates and deploys them.</p>
+      <p class="hero-tagline">I advance large-scale AI infrastructure, reinforcement-learning decision systems, and cloud platform engineering — while also writing and speaking on why human governance remains essential for correctness and reliability in financial systems.</p>
       <div class="hero-cta">
         <a href="#contact" class="btn btn-primary">Get in touch</a>
         <a href="https://linkedin.com/in/danielbenniah" class="btn btn-outline" target="_blank" rel="noopener">LinkedIn</a>
@@ -44,20 +45,17 @@
 
     <section id="recognition" class="section recognition">
       <h2 class="section-title">Recognition & Service</h2>
-      <div class="recognition-grid">
-        <article class="recognition-card">
-          <h3>IEEE Senior Member</h3>
-          <p>Elevated to Senior Member in 2025. Only about 10% of IEEE’s ~500,000 members achieve this grade, based on professional achievement and endorsement by current Senior Members.</p>
-        </article>
-        <article class="recognition-card">
-          <h3>Judging & Program Committees</h3>
-          <p>Judge for <strong>Globee Awards for Artificial Intelligence</strong> and <strong>Globee Awards for Global Disruptors</strong>. <strong>CalHacks</strong> judge (Oct 2025). Invited Technical Program Committee member for the <strong>International Congress on Blockchain and Applications</strong> (8th edition).</p>
-        </article>
-        <article class="recognition-card">
+      <div class="recognition-list">
+        <article class="recognition-block">
           <h3>Peer Review</h3>
-          <p>Journal and conference reviewer: ICAIT 2025, AIPR 2025, CSNA 2026 — evaluating research and engineering submissions in AI and distributed systems.</p>
+          <p>Journal and conference reviewer, evaluating research and engineering submissions in AI and distributed systems:</p>
+          <ul>
+            <li><strong>International Conference on Advanced Computer Science and Information Technology</strong> (ICAIT 2025)</li>
+            <li><strong>International Conference on Artificial Intelligence and Pattern Recognition</strong> (AIPR 2025)</li>
+            <li><strong>Conference on Computer Science and Network Applications</strong> (CSNA 2026)</li>
+          </ul>
         </article>
-        <article class="recognition-card recognition-card--press">
+        <article class="recognition-block">
           <h3>Press & Media</h3>
           <p>Featured in press on AI innovation and data protection, and <strong>recognized for impact for using AI for small businesses</strong>. Coverage includes:</p>
           <ul class="press-links">
@@ -69,6 +67,19 @@
             <li><a href="https://www.businesswire.com/news/home/20241021062256/en/Square-Rolls-Out-New-Partnerships-and-Features-to-Enable-Beauty-and-Wellness-Sellers-to-Succeed" target="_blank" rel="noopener">BusinessWire — Square rolls out new partnerships and features</a></li>
             <li><a href="https://www.pymnts.com/back-office/2024/square-adds-sales-and-back-office-features-for-beauty-and-wellness-sellers/" target="_blank" rel="noopener">PYMNTS — Square adds features for beauty and wellness sellers</a></li>
           </ul>
+        </article>
+        <article class="recognition-block">
+          <h3>Judging & Program Committees</h3>
+          <ul>
+            <li><strong>Globee Awards for Artificial Intelligence</strong> — Judge for internationally recognized, merit-based awards that recognize products, services, and organizations in AI worldwide through independent peer review by industry professionals.</li>
+            <li><strong>Globee Awards for Global Disruptors</strong> — Judge for the Globee® suite of business awards that recognize innovation and disruption across industries globally.</li>
+            <li><strong>CalHacks</strong> (Oct 2025) — Judge for one of the world’s largest collegiate hackathons, with thousands of participants and industry partners; evaluates technical and innovative projects.</li>
+            <li><strong>International Congress on Blockchain and Applications</strong> (8th edition) — Invited Technical Program Committee member; evaluates and selects research submissions for this international conference on blockchain and distributed systems.</li>
+          </ul>
+        </article>
+        <article class="recognition-block">
+          <h3>IEEE Senior Member</h3>
+          <p>Elevated to Senior Member in 2025. Only about 10% of IEEE’s ~500,000 members achieve this grade, based on professional achievement and endorsement by current Senior Members.</p>
         </article>
       </div>
     </section>
@@ -119,15 +130,16 @@
         </article>
         <article class="timeline-item">
           <div class="timeline-meta">
-            <span class="company">Square</span>
-            <span class="date">Mar 2023 – May 2025</span>
+            <span class="company">Square (Block)</span>
+            <span class="date">2023 – 2025</span>
           </div>
           <h3>Senior Software Engineer</h3>
           <ul>
-            <li>Led cross-org development of Square packages; work covered in BusinessWire, Nasdaq, PYMNTS, and industry press. Recognized for impact for using AI for small businesses.</li>
+            <li>Led end-to-end releases for the Appointments “Packages” product — prepaid merchant bundles redeemed across Dashboard, Point of Sale, online booking, and offline surfaces. This work was directly tied to roughly $10 million in monthly gross payment volume.</li>
+            <li>Designed and shipped core concurrency controls, idempotency guarantees, retry logic, and deduplication for race-condition-heavy flows involving simultaneous redemptions, refunds, and partial failures on unreliable networks.</li>
             <li>Spearheaded detection and blocking of tens of thousands of bad actors using open-source AI models.</li>
-            <li>Led migration of 1.6M restaurant tickets from legacy billing to a modern orders model with zero operational latency — recognized in shareholder meetings.</li>
-            <li>Mentored engineers and led learning sessions across the org.</li>
+            <li>Led zero-downtime migration of 1.6M restaurant tickets from legacy billing to a modern orders model — recognized in shareholder meetings.</li>
+            <li>Mentored engineers and led learning sessions across the org; work covered in BusinessWire, Nasdaq, PYMNTS and other industry press.</li>
           </ul>
         </article>
         <article class="timeline-item">
@@ -170,6 +182,19 @@
           <p class="degree">Bachelor of Technology, Electrical and Electronics Engineering</p>
         </article>
       </div>
+    </section>
+
+    <section id="expertise" class="section expertise">
+      <h2 class="section-title">Expertise</h2>
+      <ul class="expertise-list">
+        <li>Distributed Systems & Reliability Engineering</li>
+        <li>Concurrency Control, Idempotency & Race Conditions</li>
+        <li>Fintech / Payments Infrastructure</li>
+        <li>Applied AI Evaluation & LLM Governance</li>
+        <li>Large-Scale Zero-Downtime Migrations</li>
+        <li>Reinforcement Learning & Experimentation Platforms</li>
+        <li>IEEE Senior Member</li>
+      </ul>
     </section>
 
     <section id="contact" class="section contact">
