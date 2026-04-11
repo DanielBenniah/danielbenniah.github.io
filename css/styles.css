@@ -502,6 +502,14 @@ a.btn:hover {
   font-size: 1rem;
 }
 
+.scholar-link p {
+  margin: 0;
+}
+
+.scholar-link p + p {
+  margin-top: var(--space-sm);
+}
+
 /* --- Work (timeline) --- */
 .section-intro {
   color: var(--text-muted);
