@@ -190,6 +190,54 @@ a.btn:hover {
   margin: 0 auto;
 }
 
+.recognition-intro {
+  max-width: var(--max-wide);
+  margin: 0 auto var(--space-2xl);
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+.recognition-block-lead {
+  font-size: 0.98rem;
+  color: var(--text-muted);
+  margin: 0 0 var(--space-xl);
+  line-height: 1.65;
+}
+
+.recognition-entry {
+  margin-bottom: var(--space-2xl);
+  padding-left: var(--space-md);
+  border-left: 3px solid var(--border);
+}
+
+.recognition-entry:last-child {
+  margin-bottom: 0;
+}
+
+.recognition-entry-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 var(--space-md);
+  line-height: 1.45;
+}
+
+.recognition-entry p {
+  margin: 0 0 var(--space-sm);
+  font-size: 0.95rem;
+}
+
+.recognition-fact-label {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.recognition-entry .press-links {
+  margin-top: var(--space-md);
+}
+
 .research {
   padding-bottom: var(--space-4xl);
 }
