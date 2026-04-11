@@ -603,6 +603,31 @@ a.btn:hover {
   margin-bottom: 0;
 }
 
+.research-thread .research-thread-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: -0.02em;
+  line-height: 1.35;
+  color: var(--text);
+  margin: 0 0 var(--space-md);
+}
+
+.research-thread .research-field strong:first-child {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.research-artifact {
+  margin: var(--space-md) 0 0;
+  font-size: 0.95rem;
+}
+
+.research-artifact a {
+  font-weight: 500;
+}
+
 .scholar-link {
   margin: var(--space-2xl) 0 0;
   font-size: 1rem;

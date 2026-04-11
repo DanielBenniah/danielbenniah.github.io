@@ -163,29 +163,50 @@
     </section>
 
     <section id="research" class="section research">
-      <h2 class="section-title">Research & Original Contributions</h2>
+      <h2 class="section-title">Research &amp; Original Contributions</h2>
       <div class="research-content">
-        <p class="lead">Research spans reinforcement learning for scheduling and autonomous systems, 6G and V2V communication, and signal-free traffic control—linked to a pending patent, peer-reviewed and preprint publication, and an invited briefing to NASA.</p>
+        <p class="lead">My research program targets problems where learning-based control meets real infrastructure: intelligent transportation, next-generation networks, large-scale scheduling, and dependable cloud clients. The threads below foreground <em>what problem each line of work addresses</em>, <em>what is new in the technical approach</em>, and <em>why the broader field should care</em>—not merely where it was filed or published.</p>
         <div class="research-highlights">
-          <div class="highlight-item">
-            <h3>Patent</h3>
-            <p><strong>6G Communication Network for Signal-Free Autonomous Traffic Control</strong> (application pending). Reinforcement-learning-based approach for V2V communication enabling signal-free intersections — with claimed impact including traffic improvement and substantial emissions reduction.</p>
-          </div>
-          <div class="highlight-item">
-            <h3>Published & Presented</h3>
-            <p><strong>6G-Enabled Autonomous Vehicle Networks: Theoretical Analysis of Traffic Optimization and Signal Elimination</strong> — <em>International Journal of Advanced Computer Science and Applications (IJACSA)</em>. <a href="https://thesai.org/Publications/ViewPaper?Volume=16&Issue=2&Code=IJACSA&SerialNo=1" target="_blank" rel="noopener">Read paper</a>.</p>
-            <p><strong>Decentralized Task Scheduling in Distributed Systems: A Deep Reinforcement Learning Approach</strong> — <em>arXiv</em>. <a href="https://arxiv.org/abs/2603.24738" target="_blank" rel="noopener">Read paper</a>.</p>
-            <p><strong>GAN-Enhanced Deep Deterministic Policy Gradient Framework for Semantic-Aware Resource Allocation in 6G Network Slicing</strong>.</p>
-            <p><strong>Optimum Coordination of Overcurrent Relays using Firefly and Improved Harmony Search Algorithms</strong> — IEEE CSNT 2016, Chitkara University Conference, Chandigarh, India. <a href="https://www.techrxiv.org/doi/full/10.36227/techrxiv.177162320.01529024/v1" target="_blank" rel="noopener">TechRxiv</a>.</p>
-          </div>
-          <div class="highlight-item">
-            <h3>NASA & Broader Impact</h3>
-            <p>Presented research to NASA on latency-related challenges in unit-to-unit communications.</p>
-          </div>
-          <div class="highlight-item">
-            <h3>Open Source</h3>
-            <p>Contributions to <strong>Microsoft Azure Java SDK</strong>: PRs peer-reviewed and merged by Azure SDK maintainers, shipping in official releases. Improvements to reliability and correctness of a core cloud developer platform used by thousands of Java developers. <a href="https://github.com/Azure/azure-sdk-for-java/pull/9180" target="_blank" rel="noopener">GitHub</a>.</p>
-          </div>
+          <article class="highlight-item research-thread">
+            <h3 class="research-thread-title">Signal-free coordination for autonomous traffic (6G vehicle-to-vehicle)</h3>
+            <p class="research-field"><strong>Problem.</strong> Fixed-cycle traffic signals do not scale as autonomous vehicle density rises; centralized intersection control is fragile and high-latency. The open question is how vehicles can negotiate passage safely and efficiently using radio coordination rather than infrastructure-only timing.</p>
+            <p class="research-field"><strong>Novel contribution.</strong> A reinforcement-learning-oriented framing for vehicle-to-vehicle communication that targets signal-free intersections—linking 6G-style connectivity assumptions to control policies that aim to improve throughput and reduce stop-and-go emissions, with complementary theoretical analysis of traffic optimization under those constraints.</p>
+            <p class="research-field"><strong>Field relevance.</strong> Advances intelligent transportation and cellular-assisted autonomy: the same agenda underpins a pending patent filing on 6G communication for signal-free autonomous traffic control and peer-reviewed publication in <em>IJACSA</em> on 6G-enabled autonomous vehicle networks—artifacts that make the claims inspectable rather than slogans.</p>
+            <p class="research-artifact"><a href="https://thesai.org/Publications/ViewPaper?Volume=16&Issue=2&Code=IJACSA&SerialNo=1" target="_blank" rel="noopener">Peer-reviewed article (IJACSA)</a></p>
+          </article>
+          <article class="highlight-item research-thread">
+            <h3 class="research-thread-title">Decentralized multi-agent RL for scheduling in heterogeneous distributed systems</h3>
+            <p class="research-field"><strong>Problem.</strong> Classical schedulers and static heuristics struggle when workloads, machines, and objectives shift; centralized policies hit scalability and failure-mode limits. Task placement under partial observability is a recurring bottleneck in clusters, clouds, and edge deployments.</p>
+            <p class="research-field"><strong>Novel contribution.</strong> Formulation as a Dec-POMDP with a deliberately lightweight actor–critic architecture implemented without heavyweight ML frameworks—so the idea is testable on constrained hardware and reproducible with modest dependencies, while still reporting gains over baselines on trace-derived workloads.</p>
+            <p class="research-field"><strong>Field relevance.</strong> Pushes multi-agent deep RL toward practical scheduling research: results tied to characteristics from the public Google Cluster Trace matter for anyone improving resource allocation under heterogeneity and competing service-level goals—not only for academic benchmarks.</p>
+            <p class="research-artifact"><a href="https://arxiv.org/abs/2603.24738" target="_blank" rel="noopener">Technical report (arXiv)</a></p>
+          </article>
+          <article class="highlight-item research-thread">
+            <h3 class="research-thread-title">Semantic-aware resource control for 6G network slicing</h3>
+            <p class="research-field"><strong>Problem.</strong> Network slicing promises differentiated quality of service, but static allocation wastes spectrum when demand is bursty and service semantics differ by slice.</p>
+            <p class="research-field"><strong>Novel contribution.</strong> A GAN-enhanced deep deterministic policy gradient (DDPG) formulation aimed at semantic-aware allocation in 6G slicing—using learning to adapt resources where hand-tuned policies are too coarse.</p>
+            <p class="research-field"><strong>Field relevance.</strong> Connects reinforcement learning to operator-scale 5G/6G management problems where automation must respect slice semantics; positions the work in the same research line as next-generation cellular and edge QoS.</p>
+          </article>
+          <article class="highlight-item research-thread">
+            <h3 class="research-thread-title">Metaheuristic optimization for power-system protection coordination</h3>
+            <p class="research-field"><strong>Problem.</strong> Mis-coordinated overcurrent relays can trip in the wrong order, spreading faults and degrading grid reliability; classical tuning does not always scale to large or changing topologies.</p>
+            <p class="research-field"><strong>Novel contribution.</strong> Application of firefly and improved harmony search algorithms to optimize relay coordination—demonstrating how nature-inspired optimization can search high-dimensional protection settings more flexibly than fixed rulebooks alone.</p>
+            <p class="research-field"><strong>Field relevance.</strong> Supports power-engineering practice where reliable coordination directly affects outage risk; the work was presented in the CSNT 2016 program and documented on TechRxiv for reproducibility.</p>
+            <p class="research-artifact"><a href="https://www.techrxiv.org/doi/full/10.36227/techrxiv.177162320.01529024/v1" target="_blank" rel="noopener">TechRxiv manuscript</a></p>
+          </article>
+          <article class="highlight-item research-thread">
+            <h3 class="research-thread-title">Latency and unit-to-unit communications (NASA engagement)</h3>
+            <p class="research-field"><strong>Problem.</strong> Mission and aerospace communication systems must bound latency and reliability for unit-to-unit links; understanding where theory and practice diverge matters for planning next-generation radio architectures.</p>
+            <p class="research-field"><strong>Novel contribution.</strong> An invited technical briefing—not a paper drop—synthesizing latency-related challenges in unit-to-unit communications for a NASA audience, connecting research themes to mission-driven constraints.</p>
+            <p class="research-field"><strong>Field relevance.</strong> Shows the work was scrutinized outside academia: federal R&amp;D stakeholders apply a different bar than course grades, and the engagement grounds wireless and autonomy research in aerospace communication needs.</p>
+          </article>
+          <article class="highlight-item research-thread">
+            <h3 class="research-thread-title">Production-grade cloud SDK reliability (Microsoft Azure Java SDK)</h3>
+            <p class="research-field"><strong>Problem.</strong> Official cloud client libraries are the substrate for almost every Java service on a hyperscaler; small correctness or reliability bugs propagate to thousands of applications.</p>
+            <p class="research-field"><strong>Novel contribution.</strong> Peer-reviewed (by Azure SDK maintainers) changes merged into shipping releases—targeting robustness and correctness paths in a widely used SDK rather than a one-off demo.</p>
+            <p class="research-field"><strong>Field relevance.</strong> Translates systems discipline into infrastructure others depend on: the same rigor that shows up in papers shows up in versioned artifacts that enterprises actually run.</p>
+            <p class="research-artifact"><a href="https://github.com/Azure/azure-sdk-for-java/pull/9180" target="_blank" rel="noopener">Representative merged contribution (GitHub)</a></p>
+          </article>
         </div>
       </div>
       <div class="scholar-link">
