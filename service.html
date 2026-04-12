@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Professional service — Daniel Benniah John</title>
+  <meta name="description" content="Scholarly peer review, program committees, hackathon judging, and open-source contribution." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="page-sub">
+  <header class="site-header">
+    <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">
+      <span class="theme-toggle-icon" aria-hidden="true"></span>
+    </button>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="research.html" class="nav-link">Research</a>
+      <a href="impact.html" class="nav-link">Impact</a>
+      <a href="experience.html" class="nav-link">Experience</a>
+      <a href="service.html" class="nav-link nav-link--current" aria-current="page">Professional service</a>
+      <a href="media.html" class="nav-link">Media mentions</a>
+      <a href="background.html" class="nav-link">Background</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="section page-section service-page">
+      <h1 class="page-title">Professional service</h1>
+      <p class="page-lead">Judging and evaluation roles: scholarly peer review, program committees, and event panels—plus open-source contribution.</p>
+
+      <section class="service-section" aria-labelledby="peer-review-heading">
+        <h2 id="peer-review-heading" class="service-section-title">Scholarly peer review</h2>
+        <p class="service-section-lead">Blind or single-anonymized reviews for conferences and journals; recommendations on acceptance and revision.</p>
+        <div class="service-table-wrap" role="region" aria-labelledby="peer-review-heading">
+          <table class="service-table">
+            <thead>
+              <tr>
+                <th scope="col">Conference / journal</th>
+                <th scope="col" class="service-table__num">Year</th>
+                <th scope="col" class="service-table__num">Manuscripts</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>International Conference on Advanced Computer Science and Information Technology (ICAIT)</td>
+                <td class="service-table__num">2025</td>
+                <td class="service-table__num">1</td>
+              </tr>
+              <tr>
+                <td>International Conference on Artificial Intelligence and Pattern Recognition (AIPR)</td>
+                <td class="service-table__num">2025</td>
+                <td class="service-table__num">3</td>
+              </tr>
+              <tr>
+                <td>International Conference on Computer Science and Network Applications (CSNA)</td>
+                <td class="service-table__num">2026</td>
+                <td class="service-table__num">1</td>
+              </tr>
+              <tr>
+                <td>Indian Institute of Information Technology and Management, Gwalior — conference program (IIITM)</td>
+                <td class="service-table__num">2026</td>
+                <td class="service-table__num">2</td>
+              </tr>
+              <tr>
+                <td>International Journal of Information, Communication and Computing Technology (IJICCT)</td>
+                <td class="service-table__num">2026</td>
+                <td class="service-table__num">2</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="service-section" aria-labelledby="committees-heading">
+        <h2 id="committees-heading" class="service-section-title">Program committees &amp; event judging</h2>
+        <p class="service-section-lead">Evaluation of submissions or projects against published criteria—not commercial award panels.</p>
+        <div class="recognition-list recognition-list--compact">
+          <div class="recognition-entry">
+            <p class="recognition-entry-title">International Congress on Blockchain and Applications (8th edition)</p>
+            <p>Technical program committee member—submission review and program decisions for the research track.</p>
+          </div>
+          <div class="recognition-entry">
+            <p class="recognition-entry-title">Cal Hacks (University of California, Berkeley student hackathon)</p>
+            <p>Judge — October 2025. Reviewed student projects against published track criteria.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="service-section" aria-labelledby="oss-heading">
+        <h2 id="oss-heading" class="service-section-title">Open-source contribution</h2>
+        <p class="service-section-lead">Maintainer-reviewed changes in widely used client libraries (distinct from peer review of manuscripts).</p>
+        <div class="recognition-list recognition-list--compact">
+          <div class="recognition-entry">
+            <p class="recognition-entry-title">Microsoft Azure SDK for Java</p>
+            <p>Pull request merged into official releases after maintainer review. <a href="https://github.com/Azure/azure-sdk-for-java/pull/9180" target="_blank" rel="noopener">GitHub</a></p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Daniel Benniah John</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    (function() {
+      var toggle = document.getElementById('theme-toggle');
+      var stored = localStorage.getItem('theme');
+      if (stored === 'light') document.documentElement.classList.add('theme-light');
+      toggle.addEventListener('click', function() {
+        document.documentElement.classList.toggle('theme-light');
+        localStorage.setItem('theme', document.documentElement.classList.contains('theme-light') ? 'light' : 'dark');
+      });
+    })();
+  </script>
+</body>
+</html>

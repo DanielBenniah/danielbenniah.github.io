@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience — Daniel Benniah John</title>
+  <meta name="description" content="AI engineer: distributed systems at Netflix; Block (Square), Amazon, Walmart Labs; Master of Engineering, University of California, Berkeley; earlier National Stock Exchange of India." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="page-sub">
+  <header class="site-header">
+    <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">
+      <span class="theme-toggle-icon" aria-hidden="true"></span>
+    </button>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="research.html" class="nav-link">Research</a>
+      <a href="impact.html" class="nav-link">Impact</a>
+      <a href="experience.html" class="nav-link nav-link--current" aria-current="page">Experience</a>
+      <a href="service.html" class="nav-link">Professional service</a>
+      <a href="media.html" class="nav-link">Media mentions</a>
+      <a href="background.html" class="nav-link">Background</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section page-section work">
+      <h1 class="page-title">Experience</h1>
+      <p class="page-lead">AI engineering and technical leadership at global technology companies; graduate training at the University of California, Berkeley. Summarized for clarity.</p>
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="timeline-meta">
+            <span class="company">Netflix</span>
+            <span class="date">Jul 2025 – Present</span>
+          </div>
+          <h2 class="timeline-role">AI Engineer — Core memberships (distributed systems)</h2>
+          <ul>
+            <li>Distributed systems at Netflix for core membership-related systems: data consistency, partner-integrated datasets, and subscriber-facing correctness.</li>
+            <li>Retention-oriented experiments with measurement, guardrails, and operational workflows.</li>
+          </ul>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-meta">
+            <span class="company">Block (Square)</span>
+            <span class="date">Mar 2023 – Aug 2025</span>
+          </div>
+          <h2 class="timeline-role">AI Engineer</h2>
+          <ul>
+            <li>Backend architecture for Appointments &ldquo;Packages&rdquo; and related payment primitives (credits, compliance, subscriptions); on the order of <strong>$10 million monthly gross payment volume</strong> at peak.</li>
+            <li>Abuse prevention: detection and blocking at scale (tens of thousands of actors) using <strong>open-source machine learning</strong> models.</li>
+            <li>Reliability: service-mesh and cross-service failure modes in high-availability clusters; <strong>zero-downtime</strong> migration of roughly <strong>1.6M restaurant tickets</strong> to a modern orders model.</li>
+            <li>Led reliability exercises (e.g., GameDay), mentored engineers, and improved observability and on-call response.</li>
+          </ul>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-meta">
+            <span class="company">Amazon</span>
+            <span class="date">Nov 2021 – Mar 2023</span>
+          </div>
+          <h2 class="timeline-role">Software Development Engineer II — Alexa Shopping</h2>
+          <ul>
+            <li>Product question-and-answer surfaces: natural language processing and machine learning for content quality and de-duplication; experiments tied to large <strong>monthly active user</strong> growth.</li>
+            <li>Centralized configuration for experiments, cutting typical ramp/setup time from multiple weeks to <strong>about one week</strong> for many teams.</li>
+            <li>Batch and analytics pipelines: reduced job cost and latency (including Amazon Elastic MapReduce–class workloads with material annual savings).</li>
+          </ul>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-meta">
+            <span class="company">Walmart Labs</span>
+            <span class="date">Aug 2019 – Jan 2023</span>
+          </div>
+          <h2 class="timeline-role">Software Engineer III — Orchestration (Unified Promise)</h2>
+          <ul>
+            <li>Owned services on the <strong>tier-0</strong> path for cart and checkout at very high throughput.</li>
+            <li>Delivery promise, fulfillment, and checkout features; test infrastructure and production-debug tooling.</li>
+            <li>Cross-team contracts and integration with fulfillment and e-commerce stacks.</li>
+          </ul>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-meta">
+            <span class="company">University of California, Berkeley · Berkeley DeepDrive</span>
+            <span class="date">2018 – 2019</span>
+          </div>
+          <h2 class="timeline-role">Master of Engineering (Electrical Engineering and Computer Sciences) · Graduate researcher</h2>
+          <ul>
+            <li>Master of Engineering, Electrical Engineering and Computer Sciences.</li>
+            <li>Berkeley DeepDrive: tooling and workflows for large-scale dataset annotation and QA supporting autonomous-vehicle research.</li>
+          </ul>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-meta">
+            <span class="company">National Stock Exchange of India (via Merce Technologies)</span>
+            <span class="date">2017 – 2018</span>
+          </div>
+          <h2 class="timeline-role">Application Engineer — Risk management (Portfolio Risk Integrated Surveillance and Management)</h2>
+          <ul>
+            <li>Production systems for exchange risk management: regulatory-driven features, live trading infrastructure, and correctness under load.</li>
+            <li>Stack included C, Java, Linux, and socket-based services.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Daniel Benniah John</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    (function() {
+      var toggle = document.getElementById('theme-toggle');
+      var stored = localStorage.getItem('theme');
+      if (stored === 'light') document.documentElement.classList.add('theme-light');
+      toggle.addEventListener('click', function() {
+        document.documentElement.classList.toggle('theme-light');
+        localStorage.setItem('theme', document.documentElement.classList.contains('theme-light') ? 'light' : 'dark');
+      });
+    })();
+  </script>
+</body>
+</html>

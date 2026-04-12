@@ -3,265 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daniel Benniah John — Distributed Systems & Applied AI</title>
-  <meta name="description" content="Daniel Benniah John — distributed systems and applied AI. Measurable engineering impact, research contributions, and peer evaluation roles. Netflix, Square, Amazon; UC Berkeley." />
+  <title>Daniel Benniah John</title>
+  <meta name="description" content="Daniel Benniah John — AI engineer; distributed systems at Netflix; previously Square and Amazon. Master of Engineering, University of California, Berkeley. Research, peer review, impact, and press on this site." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
+<body class="page-home">
   <header class="site-header">
     <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">
       <span class="theme-toggle-icon" aria-hidden="true"></span>
     </button>
     <nav class="nav" aria-label="Primary">
-      <a href="#about" class="nav-link">About</a>
-      <a href="#impact" class="nav-link">Impact</a>
-      <a href="#research" class="nav-link">Contributions</a>
-      <a href="#work" class="nav-link">Experience</a>
-      <a href="#recognition" class="nav-link">Recognition</a>
-      <a href="#education" class="nav-link">Background</a>
-      <a href="#contact" class="nav-link">Contact</a>
+      <a href="index.html" class="nav-link nav-link--current" aria-current="page">Home</a>
+      <a href="research.html" class="nav-link">Research</a>
+      <a href="impact.html" class="nav-link">Impact</a>
+      <a href="experience.html" class="nav-link">Experience</a>
+      <a href="service.html" class="nav-link">Professional service</a>
+      <a href="media.html" class="nav-link">Media mentions</a>
+      <a href="background.html" class="nav-link">Background</a>
+      <a href="contact.html" class="nav-link">Contact</a>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-inner">
-        <div class="hero-content">
-          <h1 class="hero-title">Daniel Benniah John</h1>
-          <p class="hero-role">Distributed systems · Applied machine learning</p>
-          <p class="hero-lede">Engineering and research at the intersection of large-scale production systems and learning-based decision making: experimentation infrastructure, payments and commerce platforms, reinforcement learning for scheduling and autonomy, and peer-reviewed publication.</p>
-          <p class="hero-affil">Netflix · Square (Block) · Amazon · M.Eng., UC Berkeley</p>
-          <p class="hero-links">
-            <a href="mailto:danielbenniah@berkeley.edu">danielbenniah@berkeley.edu</a>
-            <span class="hero-links-sep" aria-hidden="true"> </span>
-            <a href="https://scholar.google.com/citations?user=dPCccN4AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
-            <span class="hero-links-sep" aria-hidden="true"> · </span>
+  <main class="main-home">
+    <section class="home-block home-identity" aria-labelledby="home-name">
+      <div class="home-identity-inner">
+        <div>
+          <h1 id="home-name" class="home-name">Daniel Benniah John</h1>
+          <p class="home-line">Distributed systems · Applied machine learning</p>
+          <p class="home-line home-line--strong">AI engineer and researcher. Distributed systems at Netflix (present); Square and Amazon (prior). Master of Engineering, University of California, Berkeley, Electrical Engineering and Computer Sciences.</p>
+          <p class="home-affil">Netflix · Square · Amazon · Berkeley</p>
+          <p class="home-links">
+            <a href="mailto:danielbenniah@berkeley.edu">Email</a>
+            <span class="home-links-sep">·</span>
+            <a href="https://www.researchgate.net/profile/Daniel_Benniah_John" target="_blank" rel="noopener">ResearchGate</a>
+            <span class="home-links-sep">·</span>
             <a href="https://linkedin.com/in/danielbenniah" target="_blank" rel="noopener">LinkedIn</a>
           </p>
         </div>
-        <img src="assets/headshot.png" alt="Daniel Benniah John" class="hero-headshot" width="220" height="220" />
+        <img src="assets/headshot.png" alt="Daniel Benniah John" class="home-photo" width="180" height="180" />
       </div>
     </section>
 
-    <section id="about" class="section about">
-      <h2 class="section-title">About</h2>
-      <div class="about-content">
-        <p class="lead">Work spans distributed systems reliability, experimentation and bandit-driven product surfaces, evaluation of LLM-assisted workflows, and reinforcement learning for resource allocation and scheduling.</p>
-        <p>Production ownership has included centralized experiment configuration and ramp workflows, appointments and payments products, GenAI-assisted operational tooling, and abuse detection at scale. Academic and service roles include conference peer review, technical program committee membership, and open-source contributions merged into widely used cloud client libraries.</p>
-      </div>
+    <section class="home-block home-about" aria-labelledby="home-about-heading">
+      <h2 id="home-about-heading" class="home-heading">About</h2>
+      <p class="home-about-lead">Distributed systems at Netflix; previously Square and Amazon—experimentation, commerce-related products, and machine-learning-supported work. Published research; peer review and a program committee; open source; press. Details and dates: Research, Impact, Professional service, Media mentions.</p>
     </section>
 
-    <section id="impact" class="section impact section--primary">
-      <h2 class="section-title">Impact</h2>
-      <p class="section-epigraph">Measured engineering outcomes from systems built or led. Each line states a quantity, the artifact, and why it mattered technically or economically.</p>
-      <ul class="impact-list">
-        <li>
-          <p><span class="impact-metric">~$10M monthly GPV</span> Appointments &ldquo;Packages&rdquo; (prepaid merchant bundles) delivered across Dashboard, Point of Sale, online booking, and offline redemption. Material payment volume where ledger correctness and release discipline are binding constraints.</p>
-        </li>
-        <li>
-          <p><span class="impact-metric">Millions of transactions</span> Concurrency layer for Packages: idempotency, retries, deduplication, and invariants under simultaneous redemptions, refunds, and unreliable networks. Demonstrates distributed guarantees under merchant traffic, not synthetic load.</p>
-        </li>
-        <li>
-          <p><span class="impact-metric">Tens of thousands blocked</span> Abuse detection and enforcement using open-source ML models. Automates response at volume instead of manual queues alone.</p>
-        </li>
-        <li>
-          <p><span class="impact-metric">1.6M tickets, zero planned downtime</span> Migration from legacy billing to a modern orders model for live restaurant traffic. Stateful cutover risk on a live commerce graph.</p>
-        </li>
-        <li>
-          <p><span class="impact-metric">~1 week vs. multi-week setup</span> Centralized A/B configuration and ramp workflows, replacing ad hoc coordination. Shortens time to experiment readouts.</p>
-        </li>
-        <li>
-          <p><span class="impact-metric">EMR efficiency</span> AWS EMR ETL tuned for runtime and annual compute cost. Recurring batch work at org scale.</p>
-        </li>
+    <section class="home-block home-research" aria-labelledby="home-research-heading">
+      <h2 id="home-research-heading" class="home-heading">Research</h2>
+      <p class="home-impact-teaser">Peer-reviewed and preprint work, patents, and applied threads — reinforcement learning, intelligent mobility, distributed scheduling, and open-source contributions.</p>
+      <p class="home-impact-more"><a href="research.html">See research →</a></p>
+    </section>
+
+    <section class="home-block home-impact" aria-labelledby="home-impact-heading">
+      <h2 id="home-impact-heading" class="home-heading">Impact</h2>
+      <p class="home-impact-teaser">Measurable outcomes at scale: revenue-tied systems, correctness under load, large migrations, faster experimentation.</p>
+      <p class="home-impact-more"><a href="impact.html">See metrics →</a></p>
+    </section>
+
+    <section class="home-block home-footprint" aria-labelledby="home-footprint-heading">
+      <h2 id="home-footprint-heading" class="home-heading">Leadership &amp; visibility</h2>
+      <ul class="home-list">
+        <li><strong>Review &amp; committees</strong> — Manuscript review for international conferences and journals (venues listed on Professional service); technical program committee, International Congress on Blockchain and Applications; hackathon judge, Cal Hacks (Berkeley).</li>
+        <li><strong>Scholarship</strong> — <em>International Journal of Advanced Computer Science and Applications</em>; <em>arXiv</em> preprint (decentralized reinforcement-learning scheduling); patent filing (sixth-generation wireless and autonomous traffic).</li>
+        <li><strong>Briefings &amp; open source</strong> — NASA (communications latency); merged contributions to Microsoft Azure Java software development kit.</li>
       </ul>
-    </section>
-
-    <section id="research" class="section research section--primary">
-      <h2 class="section-title">Contributions</h2>
-      <p class="section-epigraph">Research threads stated as problem, novelty, and field relevance. Artifacts link to the scholarly record or code where applicable.</p>
-      <div class="research-content">
-        <div class="research-highlights">
-          <article class="highlight-item research-thread">
-            <h3 class="research-thread-title">Signal-free coordination for autonomous traffic (6G vehicle-to-vehicle)</h3>
-            <p class="research-field"><strong>Problem.</strong> Fixed-cycle signals scale poorly as autonomous density increases; centralized intersection control is brittle. How should vehicles coordinate passage using radio rather than infrastructure-only timing?</p>
-            <p class="research-field"><strong>Novel contribution.</strong> Reinforcement-learning-oriented V2V framing for signal-free intersections, linking 6G-style connectivity to control policies for throughput and emissions, with complementary analysis in the journal literature.</p>
-            <p class="research-field"><strong>Field relevance.</strong> Intelligent transportation and cellular-assisted autonomy; inspectable claims via pending patent filing and peer-reviewed <em>IJACSA</em> article.</p>
-            <p class="research-artifact"><a href="https://thesai.org/Publications/ViewPaper?Volume=16&Issue=2&Code=IJACSA&SerialNo=1" target="_blank" rel="noopener">Peer-reviewed article (IJACSA)</a></p>
-          </article>
-          <article class="highlight-item research-thread">
-            <h3 class="research-thread-title">Decentralized multi-agent RL for scheduling in heterogeneous distributed systems</h3>
-            <p class="research-field"><strong>Problem.</strong> Static schedulers and full centralization fail under shifting workloads and partial observability in clusters and edge deployments.</p>
-            <p class="research-field"><strong>Novel contribution.</strong> Dec-POMDP formulation with a lightweight actor–critic implementation (minimal framework dependencies), evaluated against trace-derived workloads.</p>
-            <p class="research-field"><strong>Field relevance.</strong> Resource allocation under heterogeneity and competing objectives; connects to public cluster-trace methodology.</p>
-            <p class="research-artifact"><a href="https://arxiv.org/abs/2603.24738" target="_blank" rel="noopener">Technical report (arXiv)</a></p>
-          </article>
-          <article class="highlight-item research-thread">
-            <h3 class="research-thread-title">Semantic-aware resource control for 6G network slicing</h3>
-            <p class="research-field"><strong>Problem.</strong> Slicing requires differentiated QoS; static allocation wastes spectrum when demand and semantics vary.</p>
-            <p class="research-field"><strong>Novel contribution.</strong> GAN-enhanced DDPG formulation for semantic-aware allocation in 6G slicing.</p>
-            <p class="research-field"><strong>Field relevance.</strong> Operator-scale 5G/6G management and edge QoS automation.</p>
-          </article>
-          <article class="highlight-item research-thread">
-            <h3 class="research-thread-title">Metaheuristic optimization for power-system protection coordination</h3>
-            <p class="research-field"><strong>Problem.</strong> Mis-coordinated overcurrent relays worsen fault propagation; classical tuning scales poorly.</p>
-            <p class="research-field"><strong>Novel contribution.</strong> Firefly and improved harmony search applied to relay coordination (CSNT 2016; TechRxiv manuscript).</p>
-            <p class="research-field"><strong>Field relevance.</strong> Grid reliability and protection engineering practice.</p>
-            <p class="research-artifact"><a href="https://www.techrxiv.org/doi/full/10.36227/techrxiv.177162320.01529024/v1" target="_blank" rel="noopener">TechRxiv manuscript</a></p>
-          </article>
-          <article class="highlight-item research-thread">
-            <h3 class="research-thread-title">Unit-to-unit communications (NASA briefing)</h3>
-            <p class="research-field"><strong>Problem.</strong> Latency and reliability bounds for aerospace unit-to-unit links.</p>
-            <p class="research-field"><strong>Novel contribution.</strong> Invited technical briefing synthesizing latency challenges for a NASA audience.</p>
-            <p class="research-field"><strong>Field relevance.</strong> Mission-driven constraints on wireless and autonomy research.</p>
-          </article>
-          <article class="highlight-item research-thread">
-            <h3 class="research-thread-title">Cloud SDK reliability (Microsoft Azure Java SDK)</h3>
-            <p class="research-field"><strong>Problem.</strong> Official client libraries amplify small correctness bugs across many applications.</p>
-            <p class="research-field"><strong>Novel contribution.</strong> Maintainer-reviewed changes merged into shipping releases.</p>
-            <p class="research-field"><strong>Field relevance.</strong> Production infrastructure others depend on.</p>
-            <p class="research-artifact"><a href="https://github.com/Azure/azure-sdk-for-java/pull/9180" target="_blank" rel="noopener">Merged change (GitHub)</a></p>
-          </article>
-        </div>
-      </div>
-      <div class="scholar-link">
-        <a href="https://scholar.google.com/citations?user=dPCccN4AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
-        <span class="scholar-link-sep">·</span>
-        <a href="https://www.researchgate.net/profile/Daniel_Benniah_John" target="_blank" rel="noopener">ResearchGate</a>
-      </div>
-    </section>
-
-    <section id="work" class="section work">
-      <h2 class="section-title">Experience</h2>
-      <p class="section-epigraph">Selected roles in industry and research labs.</p>
-      <div class="timeline">
-        <article class="timeline-item">
-          <div class="timeline-meta">
-            <span class="company">Netflix</span>
-            <span class="date">Jul 2025 – Present</span>
-          </div>
-          <h3>Distributed systems (applied GenAI / experimentation)</h3>
-          <ul>
-            <li>Investigation and remediation of data inconsistencies across partner-integrated datasets.</li>
-            <li>Retention experiments with measurement dashboards and guardrail metrics.</li>
-            <li>GenAI-assisted tooling for operational triage and analysis.</li>
-          </ul>
-        </article>
-        <article class="timeline-item">
-          <div class="timeline-meta">
-            <span class="company">Square (Block)</span>
-            <span class="date">2023 – 2025</span>
-          </div>
-          <h3>Senior software engineer</h3>
-          <ul>
-            <li>End-to-end releases for Appointments &ldquo;Packages&rdquo; — prepaid bundles across Dashboard, Point of Sale, online booking, offline — on the order of $10M monthly GPV.</li>
-            <li>Concurrency controls: idempotency, retries, deduplication for races, refunds, and partial failures on unreliable networks.</li>
-            <li>Scaled Packages to millions of small-business transactions with explicit invariants and validation.</li>
-            <li>Detection and blocking of tens of thousands of bad actors via open-source ML models.</li>
-            <li>Zero-downtime migration of 1.6M restaurant tickets to a modern orders model.</li>
-          </ul>
-        </article>
-        <article class="timeline-item">
-          <div class="timeline-meta">
-            <span class="company">Amazon</span>
-            <span class="date">Nov 2021 – Mar 2023</span>
-          </div>
-          <h3>Software development engineer II (experimentation, bandits, NLP)</h3>
-          <ul>
-            <li>A/B experimentation: centralized config and ramp workflows; setup reduced from weeks to about a week.</li>
-            <li>Bandit-based adaptive experiences and offline evaluation pipelines.</li>
-            <li>Content-quality pipelines supporting experiments with MAU growth.</li>
-            <li>AWS EMR ETL efficiency (runtime reduction and annual compute savings).</li>
-          </ul>
-        </article>
-        <article class="timeline-item">
-          <div class="timeline-meta">
-            <span class="company">Walmart Labs · UC Berkeley (Berkeley DeepDrive)</span>
-            <span class="date">2018 – 2021</span>
-          </div>
-          <h3>Earlier roles</h3>
-          <ul>
-            <li>Walmart Labs: pre-orders, digital delivery, sort centres; delivery promise accuracy.</li>
-            <li>Berkeley DeepDrive: dataset annotation/QA; ML and RL for research tracks.</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section id="recognition" class="section recognition section--secondary">
-      <h2 class="section-title">Recognition</h2>
-      <p class="section-epigraph">Peer evaluation, program service, and third-party citation of work—documented without emphasis on honors or rankings.</p>
-      <div class="recognition-list">
-        <article class="recognition-block">
-          <h3 class="recognition-subhead">Evaluation and program service</h3>
-          <p class="recognition-block-lead">Conference reviewers are recruited by program committees; TPC members are invited by organizers to assess submissions against venue criteria.</p>
-
-          <div class="recognition-entry">
-            <p class="recognition-entry-title">Peer reviewer — ICAIT 2025, AIPR 2025, CSNA 2026</p>
-            <p>Written reviews for AI, CS, and network-applications tracks; recommendations inform accept/revise decisions.</p>
-          </div>
-
-          <div class="recognition-entry">
-            <p class="recognition-entry-title">Technical program committee — International Congress on Blockchain and Applications (8th edition)</p>
-            <p>Evaluation and selection of research submissions for the distributed-systems and blockchain program.</p>
-          </div>
-
-          <div class="recognition-entry">
-            <p class="recognition-entry-title">Technical evaluator — CalHacks (October 2025)</p>
-            <p>Panel review of student projects against published track criteria, alongside other evaluators.</p>
-          </div>
-        </article>
-
-        <article class="recognition-block">
-          <h3 class="recognition-subhead">Scholarly and filed work</h3>
-          <p class="recognition-block-lead">Same threads as under <a href="#research">Contributions</a>; patent application (6G / signal-free traffic), <em>IJACSA</em> article, <em>arXiv</em> preprint on decentralized scheduling.</p>
-        </article>
-
-        <article class="recognition-block">
-          <h3 class="recognition-subhead">External citation</h3>
-          <p class="recognition-block-lead">Editorial interviews on AI and data protection (Brazil); NASA briefing on unit-to-unit latency; trade press on Square product areas; merged Azure Java SDK changes.</p>
-          <ul class="press-links press-links--inline">
-            <li><a href="https://natelinha.uol.com.br/famosos/2023/11/18/engenheiro-de-software-revoluciona-o-mercado-com-inovacoes-em-inteligencia-artificial-223627.php" target="_blank" rel="noopener">UOL</a></li>
-            <li><a href="https://www.em.com.br/colunistas/fabiano-moraes/2025/03/7092946-inteligencia-artificial-surge-como-aliada-a-criacao-de-novos-postos-de-trab.html" target="_blank" rel="noopener">EM</a></li>
-            <li><a href="https://www.correiobraziliense.com.br/colunistas/fabiano-moraes/2025/04/7105143-especialista-recomenda-maior-atencao-a-protecao-de-dados-em-rede.html" target="_blank" rel="noopener">Correio Braziliense</a></li>
-            <li><a href="https://jornaldebrasilia.com.br/blogs-e-colunas/analice-nicolau/tecnologia-com-estrategia-proteja-seus-dados-como-quem-joga-para-ganhar/" target="_blank" rel="noopener">Jornal de Brasília</a></li>
-            <li><a href="https://jornaldobras.com.br/noticia/63270/na-era-digital-seguranca-e-jogo-coletivo-como-proteger-seus-dados-com-tatica-de-campeao" target="_blank" rel="noopener">Jornal do Brasil</a></li>
-            <li><a href="https://www.businesswire.com/news/home/20241021062256/en/Square-Rolls-Out-New-Partnerships-and-Features-to-Enable-Beauty-and-Wellness-Sellers-to-Succeed" target="_blank" rel="noopener">BusinessWire</a></li>
-            <li><a href="https://www.pymnts.com/back-office/2024/square-adds-sales-and-back-office-features-for-beauty-and-wellness-sellers/" target="_blank" rel="noopener">PYMNTS</a></li>
-            <li><a href="https://github.com/Azure/azure-sdk-for-java/pull/9180" target="_blank" rel="noopener">Azure SDK (GitHub)</a></li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section id="education" class="section education">
-      <h2 class="section-title">Background</h2>
-      <div class="edu-grid">
-        <article class="edu-card">
-          <h3>University of California, Berkeley</h3>
-          <p class="degree">M.Eng., Electrical Engineering and Computer Sciences</p>
-          <p class="meta">Multi-agent reinforcement learning with Prof. Alexandre Bayen.</p>
-        </article>
-        <article class="edu-card">
-          <h3>Vellore Institute of Technology, India</h3>
-          <p class="degree">B.Tech., Electrical and Electronics Engineering</p>
-        </article>
-      </div>
-      <div class="expertise-inline" id="expertise">
-        <h3 class="expertise-inline-title">Research and practice areas</h3>
-        <p>Distributed systems and reliability · concurrency and idempotency · payments and fintech infrastructure · experimentation and bandits · applied AI evaluation and LLM governance · large-scale migrations · reinforcement learning · peer review and program committees.</p>
-      </div>
-    </section>
-
-    <section id="contact" class="section contact">
-      <h2 class="section-title">Contact</h2>
-      <p class="contact-intro">For collaboration, review invitations, or technical discussion, email with topic and timeline.</p>
-      <div class="contact-links">
-        <a href="mailto:danielbenniah@berkeley.edu" class="contact-link">danielbenniah@berkeley.edu</a>
-        <a href="https://linkedin.com/in/danielbenniah" target="_blank" rel="noopener" class="contact-link">LinkedIn</a>
-      </div>
+      <p class="home-continue"><a href="service.html">Professional service →</a> · <a href="media.html">Media mentions →</a></p>
     </section>
   </main>
 

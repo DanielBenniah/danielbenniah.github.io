@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Industry-wide impact — Daniel Benniah John</title>
+  <meta name="description" content="Industry-wide engineering outcomes: gross payment volume, scale, open source, migrations, experimentation, and cost savings." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="page-sub">
+  <header class="site-header">
+    <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">
+      <span class="theme-toggle-icon" aria-hidden="true"></span>
+    </button>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="research.html" class="nav-link">Research</a>
+      <a href="impact.html" class="nav-link nav-link--current" aria-current="page">Impact</a>
+      <a href="experience.html" class="nav-link">Experience</a>
+      <a href="service.html" class="nav-link">Professional service</a>
+      <a href="media.html" class="nav-link">Media mentions</a>
+      <a href="background.html" class="nav-link">Background</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section section--primary page-section impact-page">
+      <h1 class="page-title">Industry-wide impact</h1>
+      <p class="page-lead">Outcomes from systems I led or owned. Open a section for context and links.</p>
+
+      <div class="impact-accordion">
+        <details class="impact-block" id="impact-packages" open>
+          <summary class="impact-summary">
+            <span class="impact-summary-title">Appointments Packages</span>
+            <span class="impact-summary-metric">~$10M/mo gross payment volume · end-to-end ownership</span>
+          </summary>
+          <div class="impact-body">
+            <p><strong>Leading role.</strong> Owned end-to-end delivery of Appointments &ldquo;Packages&rdquo;: prepaid merchant bundles redeemed across Dashboard, Point of Sale, online booking, and offline surfaces—tying engineering work to on-the-order-of <strong>$10M monthly gross payment volume</strong>.</p>
+            <p>Scoped releases, coordinated cross-surface behavior, and kept correctness and rollout risk under control as the product scaled.</p>
+            <p><a href="https://squareup.com/help/us/en/article/8268-create-and-manage-packages-with-square-appointments" target="_blank" rel="noopener">Square Help — Create and manage packages for Appointments</a></p>
+            <p class="impact-media-label"><strong>Related coverage</strong> (product launches referencing this line of work):</p>
+            <ul class="impact-link-list">
+              <li><a href="https://www.businesswire.com/news/home/20241021062256/en/Square-Rolls-Out-New-Partnerships-and-Features-to-Enable-Beauty-and-Wellness-Sellers-to-Succeed" target="_blank" rel="noopener">BusinessWire — Square partnerships &amp; features (beauty &amp; wellness)</a></li>
+              <li><a href="https://www.pymnts.com/back-office/2024/square-adds-sales-and-back-office-features-for-beauty-and-wellness-sellers/" target="_blank" rel="noopener">PYMNTS — Square seller tooling</a></li>
+              <li><a href="media.html">All media mentions →</a></li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="impact-block" id="impact-azure-sdk">
+          <summary class="impact-summary">
+            <span class="impact-summary-title">Microsoft Azure software development kit for Java (open source)</span>
+            <span class="impact-summary-metric">Azure SDK for Java · open source · maintainer-reviewed · production</span>
+          </summary>
+          <div class="impact-body">
+            <p>Maintainer-reviewed contributions merged into <strong>shipping Microsoft Azure software development kit for Java</strong> releases—raising the bar for client-library correctness and behavior across services that depend on Microsoft Azure application programming interfaces.</p>
+            <p><a href="https://github.com/Azure/azure-sdk-for-java/pull/9180" target="_blank" rel="noopener">GitHub pull request</a></p>
+          </div>
+        </details>
+
+        <details class="impact-block">
+          <summary class="impact-summary">
+            <span class="impact-summary-title">Systems handling millions of transactions</span>
+            <span class="impact-summary-metric">Concurrency · reliability under load</span>
+          </summary>
+          <div class="impact-body">
+            <p>Built and hardened the Packages stack for <strong>millions</strong> of small-business transactions: idempotency, retries, deduplication, and explicit invariants for simultaneous redemptions, refunds, and partial failures on unreliable networks.</p>
+            <p><strong>Service mesh &amp; cross-service behavior.</strong> Production issues often surfaced at service boundaries—timeouts, retry storms, inconsistent state across hops, and hard-to-reproduce races when multiple services touched the same ledger paths. Work included tracing those failure modes, tightening contracts between callers and dependencies, and validating behavior under real merchant traffic—not synthetic benchmarks.</p>
+          </div>
+        </details>
+
+        <details class="impact-block">
+          <summary class="impact-summary">
+            <span class="impact-summary-title">Thousands of scammers blocked</span>
+            <span class="impact-summary-metric">Abuse detection · open-source machine learning</span>
+          </summary>
+          <div class="impact-body">
+            <p>Led detection and blocking of <strong>tens of thousands</strong> of bad actors using <strong>open-source machine learning models</strong>, automating enforcement at volume instead of relying solely on manual review queues.</p>
+          </div>
+        </details>
+
+        <details class="impact-block">
+          <summary class="impact-summary">
+            <span class="impact-summary-title">Migration with zero downtime</span>
+            <span class="impact-summary-metric">1.6M restaurant tickets</span>
+          </summary>
+          <div class="impact-body">
+            <p>Zero-downtime migration of <strong>1.6M restaurant tickets</strong> from legacy billing to a modern orders model—stateful cutover on a live commerce graph where mistakes show up as customer-visible billing errors or outages.</p>
+          </div>
+        </details>
+
+        <details class="impact-block">
+          <summary class="impact-summary">
+            <span class="impact-summary-title">Multi-week → ~1 week experiment setup</span>
+            <span class="impact-summary-metric">Amazon · centralized ramp &amp; config</span>
+          </summary>
+          <div class="impact-body">
+            <p>Built and scaled split-testing experimentation infrastructure: <strong>centralized configuration and ramp workflows</strong> that cut experiment setup from <strong>multiple weeks to about one week</strong> for many teams—reducing coordination tax and time-to-learning.</p>
+          </div>
+        </details>
+
+        <details class="impact-block">
+          <summary class="impact-summary">
+            <span class="impact-summary-title">Amazon Elastic MapReduce efficiency</span>
+            <span class="impact-summary-metric">~$140k USD saved annually</span>
+          </summary>
+          <div class="impact-body">
+            <p>Tuned <strong>Amazon Web Services Elastic MapReduce</strong> extract-transform-load pipelines for runtime and cost: material reduction in batch duration and roughly <strong>$140k United States dollars in annual compute savings</strong> (recurring infrastructure leverage at org scale).</p>
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Daniel Benniah John</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    (function() {
+      var toggle = document.getElementById('theme-toggle');
+      var stored = localStorage.getItem('theme');
+      if (stored === 'light') document.documentElement.classList.add('theme-light');
+      toggle.addEventListener('click', function() {
+        document.documentElement.classList.toggle('theme-light');
+        localStorage.setItem('theme', document.documentElement.classList.contains('theme-light') ? 'light' : 'dark');
+      });
+    })();
+  </script>
+</body>
+</html>
