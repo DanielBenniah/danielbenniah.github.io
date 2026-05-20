@@ -833,6 +833,193 @@ html.theme-light .theme-toggle-icon {
   line-height: 1.5;
 }
 
+.background-block-title {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: var(--space-2xl) 0 var(--space-lg);
+}
+
+.page-section .background-block-title:first-of-type {
+  margin-top: var(--space-xl);
+}
+
+.honors-section {
+  margin-bottom: var(--space-2xl);
+  padding-top: var(--space-2xl);
+  border-top: 1px solid var(--border);
+}
+
+.honors-section .background-block-title {
+  margin-top: 0;
+  margin-bottom: var(--space-sm);
+}
+
+.honors-section-lead {
+  margin: 0 0 var(--space-xl);
+  max-width: var(--max-wide);
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.honors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg);
+  max-width: var(--max-wide);
+}
+
+.honor-card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-lg) var(--space-lg) var(--space-md);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 1px 0 color-mix(in srgb, var(--text) 4%, transparent);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.honor-card:hover {
+  border-color: color-mix(in srgb, var(--border) 55%, var(--link) 45%);
+  box-shadow: 0 4px 24px color-mix(in srgb, var(--bg) 40%, var(--link) 8%);
+}
+
+.honor-card--ieee {
+  --honor-accent: #00629b;
+}
+
+.honor-card--scrs {
+  --honor-accent: #7c5c2e;
+}
+
+html.theme-light .honor-card--ieee {
+  --honor-accent: #004f7c;
+}
+
+html.theme-light .honor-card--scrs {
+  --honor-accent: #6b4f28;
+}
+
+.honor-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--border);
+}
+
+.honor-mark {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--honor-accent);
+  background: color-mix(in srgb, var(--honor-accent) 14%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--honor-accent) 35%, var(--border));
+  border-radius: var(--radius);
+}
+
+.honor-card-heading {
+  min-width: 0;
+}
+
+.honor-org {
+  margin: 0 0 var(--space-xs);
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+}
+
+.honor-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.honor-title a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.honor-title a:hover {
+  color: var(--link);
+  text-decoration: underline;
+}
+
+.honor-tagline {
+  margin: 0 0 var(--space-md);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.honor-highlights {
+  margin: 0 0 var(--space-lg);
+  padding: 0;
+  list-style: none;
+  flex-grow: 1;
+}
+
+.honor-highlights li {
+  position: relative;
+  padding-left: 1.15rem;
+  margin-bottom: var(--space-sm);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.honor-highlights li:last-child {
+  margin-bottom: 0;
+}
+
+.honor-highlights li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--honor-accent);
+}
+
+.honor-card-footer {
+  margin: 0;
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border);
+}
+
+.honor-cta {
+  display: inline-block;
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--honor-accent);
+}
+
+.honor-cta:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
 .expertise-inline {
   max-width: var(--max-content);
   padding-top: var(--space-xl);
@@ -922,6 +1109,14 @@ html.theme-light .theme-toggle-icon {
   font-size: 0.95rem;
   color: var(--text-muted);
   line-height: 1.6;
+}
+
+.service-section-note {
+  margin: var(--space-lg) 0 0;
+  max-width: var(--max-content);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.55;
 }
 
 /* --- Media mentions page --- */
